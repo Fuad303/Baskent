@@ -6,6 +6,13 @@
     font-family: 'Montserrat', sans-serif;
     transition: 0.4s all;
 }
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+a:hover{
+    color: #FFFFFF;
+}
 .nav{
     background: url(./images/nav-image.png)  no-repeat,rgba(0, 0, 0, 0.5    );
     background-size: cover;
@@ -167,7 +174,10 @@ hr{
     position: absolute;
     margin: 0;
 }
-
+#nav__bg{
+    background-color: #A56F29; 
+    padding: 12px 22px;
+}
 @media (max-width: 1200px){
     .nav-logo img{
         width: 200px;
@@ -184,6 +194,10 @@ hr{
     }
 }
 @media (max-width: 768px){
+    #nav__bg{
+        background-color: transparent; 
+        padding: 0;
+    }
     .nav-menu, 
     .nav-rezervation,
     .nav-search{
@@ -245,6 +259,10 @@ hr{
     .nav div.media_button{
         display: block;
         margin-top: 60px;
+    }
+    .nav-social i{
+        margin-right: 2px;
+        margin-top: 25px;
     }
 }
 /* About Styles */
@@ -345,6 +363,7 @@ hr{
 .fillial-item{
     width: 370px;
     height: 260px;
+    position: relative;
 }
 .fillial-item:nth-child(1){
     background-image: url(./images/fillial-1.png);
@@ -358,13 +377,21 @@ hr{
 .fillial-item-title{
     font-size: 20px;
     font-weight: 600;
-    position: absolute;
     padding-left: 20px;
     padding-top: 224px;
 }
 .fillial-item-title a{
     text-decoration: none;
     color: #FFFFFF;
+    position: absolute;
+}
+.fillial-item:hover .fillial-item-title a{
+    top: 40%;
+    left: 25%;
+    max-width: 250px;
+}
+.fillial-item:hover{
+    filter: brightness(0.6);
 }
 @media (max-width: 1200px){
     .fillial-item-title{
@@ -374,6 +401,7 @@ hr{
 @media (max-width: 991px){
     .fillial-item-title{
         font-size: 15px;
+        padding-top: 210px;
     }
 }
 @media (max-width: 768px){
@@ -382,6 +410,10 @@ hr{
         align-items: center;
         justify-content: center;
         text-align: center;
+    }
+    .fillial-item-title{
+        font-size: 15px;
+        padding-top: 215px;
     }
 }
 /* Menu */

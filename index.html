@@ -13,13 +13,14 @@
     <!-- Font Awasome -->
     <script src="https://kit.fontawesome.com/18fe446eba.js" crossorigin="anonymous"></script>
     <!-- Font Awasome -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
     <title>Başkent</title>
 </head>
 <body>
     <section class="nav">
-        <div class="container">
+        <div class="container p-0">
             <div class="nav-top container">
-                <div class="nav-rezervation col-4"><a href="./Pages/rezervasiya.html">Rezervasiya</a></div>
+                <div class="nav-rezervation col-4"><a href="tel:+99412 336 3662">Rezervasiya</a></div>
                 <div class="nav-logo col-4 col-md-6"><a href="./index.html"><img src="./images/logo.png" alt=""></a></div>
                 <div class="nav-social col-4 col-md-6">
                     <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
@@ -32,7 +33,7 @@
                 </div>
                 <div class="nav__menu col-12" id="mainListDiv">
                     <ul>
-                        <li><a class="hide-rezervation" href="./Pages/rezervasiya.html">Rezervasiya</a></li>
+                        <li><a class="hide-rezervation" href="tel:+99412 336 3662">Rezervasiya</a></li>
                         <li><a href="./Pages/haqqimizda.html">Haqqımızda</a></li>
                         <li><a href="./Pages/filiallar.html">Filiallar</a></li>
                         <li><a href="./Pages/menyu.html">Menyu</a></li>
@@ -55,7 +56,7 @@
             <a href="./Pages/menyu.html">Ətraflı</a></div>
         </div>
     </section>
-    <section class="about row">
+    <section class="about">
         <div class="about-img col-lg-6 col-12"><img src="./images/umumi-zal.png" alt=""></div>
         <div class="about-info col-lg-6 col-12">
             <div class="title"><span>Haqqımızda</span>
@@ -156,17 +157,23 @@
             </div>
         </div>
     </section>
-    <section class="partner">
+    <section class="partner carousel">
         <div class="container">
-            <div class="partner-wrapper col-12">
-                <div class="partner-item"><img src="./images/partner-1.png" alt=""></div>
-                <div class="partner-item"><img src="./images/partner-2.png" alt=""></div>
-                <div class="partner-item"><img src="./images/partner-3.png" alt=""></div>
-                <div class="partner-item"><img src="./images/partner-4.png" alt=""></div>
-                <div class="partner-item"><img src="./images/partner-5.png" alt=""></div>
-            </div>
+        <div class="scroll-arrow" id="scroll-left">
+            <i class="fa-solid fa-circle-left"></i>
+          </div>
+          <ul id="imgList">
+            <li><img src="./images/partner-1.png"/></li>
+            <li><img src="./images/partner-2.png"/></li>
+            <li><img src="./images/partner-3.png"/></li>
+            <li><img src="./images/partner-4.png"/></li>
+            <li><img src="./images/partner-5.png"/></li>
+          </ul>
+          <div class="scroll-arrow" id="scroll-right" onclick="scrollRight()">
+            <i class="fa-solid fa-circle-right"></i>
+          </div>
         </div>
-    </section>
+        </section>
     <section class="blog">
         <div class="container">
             <div class="whyus-title">
@@ -301,6 +308,7 @@
      <!-- End of Top button -->
  <!--  Script  -->
  <script src="./script.js"></script>
+ <script src="/main.js"></script>
  <!--  Script  -->
 </body>
 </html>

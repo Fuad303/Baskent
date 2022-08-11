@@ -14,31 +14,36 @@ a:hover{
     color: #FFFFFF;
 }
 .nav{
-    background: url(./images/nav-image.png)  no-repeat,rgba(0, 0, 0, 0.5    );
+    background: url(./images/nav-image.png)  no-repeat;
     background-size: cover;
     padding-top: 20px;
 }
 .nav-top{
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 }
 .nav-rezervation{
     display: flex;
     justify-content: center;
     height: 100%;
 }
+.nav-rezervation a:hover{
+    background-color: #005246;
+    border-color: #005246;
+}
 .hide-rezervation{
     display: none;
 }
 .nav-rezervation a{
     border: 1px solid #FFFFFF;
-    padding: 7px 13px 13px 13px;
+    padding: 13px 13px 13px 13px;
     text-decoration: none;
     color: #FFFFFF;
     font: 18px 100;
 }
 .nav-logo{
-    background-color: #FFFFFF;
+    background-color: #ffffff5b;
     width: 355px;
     height: 100px;
 }
@@ -54,6 +59,9 @@ a:hover{
     margin-right: 12px; 
     margin-bottom: 30px;
 }
+.nav-social i:hover{
+    color: #005246;
+}
 .nav-search{
     position: relative;
 }
@@ -63,6 +71,10 @@ a:hover{
     border-top: none;
     border-left: none;
     border-right: none;
+    border-color: #FFFFFF;
+}
+.nav-search input::-webkit-search-cancel-button{
+    -webkit-appearance: none;
 }
 .nav-search input:focus{
     outline: none !important;
@@ -116,6 +128,18 @@ hr{
 .hide-search{
     display: none;
 }
+::placeholder {
+    color: #FFFFFF;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #FFFFFF;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #FFFFFF;
+  }
 .nav div.nav__menu ul{
     display: flex;
     justify-content: space-between;
@@ -131,7 +155,7 @@ hr{
     border-radius: 4px;
 }
 .nav div.nav__menu ul li a:hover{
-    color: #005246;
+    background-color: #A56F29;
 }
 .nav div.media_button {
     width: 40px;
@@ -193,10 +217,13 @@ hr{
         font-size: 13px;
     }
 }
-@media (max-width: 768px){
+@media (max-width: 991px){
     #nav__bg{
         background-color: transparent; 
         padding: 0;
+    }
+    .nav div.nav__menu ul li a:hover{
+        background-color: transparent;
     }
     .nav-menu, 
     .nav-rezervation,
@@ -217,7 +244,7 @@ hr{
     .nav div.nav__menu{
         position: absolute;
         background-color: #FFFFFF;
-        margin-top: 65px;
+        margin-top: 75px;
         height: 0;
         overflow: hidden;
         flex-shrink: 0;
@@ -264,6 +291,18 @@ hr{
         margin-right: 2px;
         margin-top: 25px;
     }
+    .nav-social::placeholder {
+        color: #005246;
+        opacity: 1; /* Firefox */
+      }
+      
+      .nav-social:-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color: #005246;
+      }
+      
+      .nav-social::-ms-input-placeholder { /* Microsoft Edge */
+       color: #005246;
+      }
 }
 /* About Styles */
 .about{
@@ -272,6 +311,7 @@ hr{
 }
 .about-img img{
     width: 100%;
+    padding-right: 20px;
 }
 .title{
     font-size: 32px;
@@ -286,20 +326,25 @@ hr{
 }
 @media (max-width: 1350px){
     .about-img img{
-        /* width: 500px;
-        height: 500px; */
         width: 100%;
         height: auto;
     }
 }
 @media (max-width: 991px){
+    .about{
+        flex-direction: column;
+    }
     .title{
         text-align: center;
         margin-top: 25px;
     }
+    .about-text{
+        padding: 0 50px;
+    }
     .about-img img{
         width: 100%;
         height: 100%;
+        padding-right: 0;
     }
 }
 @media (max-width: 551px){
@@ -392,8 +437,9 @@ hr{
     position: absolute;
 }
 .fillial-item:hover .fillial-item-title a{
-    top: 40%;
+    top: 45%;
     left: 25%;
+    transform: translateX(50%, 50%);
     max-width: 250px;
 }
 .fillial-item:hover{
@@ -441,16 +487,27 @@ hr{
     position: relative;
 }
 .menu-item-title{
-    position: absolute;
     z-index: 1;
-    top: 50px;
-    margin-left: 47px;
+
 }
 .menu-item-title a{
     text-decoration: none;
     color: #FFFFFF;
     font-size: 27px;
     font-weight: 700;
+    position: absolute;
+    top: 50px;
+    margin-left: 47px;
+}
+.menu-item:hover .menu-item-title a,
+.menu-item-2:hover .menu-item-title a{
+    top: 45%;
+    left: 20%;
+    transform: translateX(50%, 50%);
+    max-width: 250px;
+}
+.menu-item-img:hover{
+    filter: brightness(0.6);
 }
 @media (max-width: 768px){
     .menu-wrapper{
@@ -460,20 +517,6 @@ hr{
     .menu-item-2{
         width: 100%;
         margin-bottom: 15px;
-    }
-}
-/* Partner */
-.partner-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 60px;
-}
-@media (max-width: 768px)
-{
-    .partner-item img{
-        width: 180px;
     }
 }
 /* Blog */
@@ -635,11 +678,17 @@ footer{
     line-height: 2.4em;
 }
 .footer-wrapper ul li a{
-    text-decoration: none;
+    text-decoration: underline;
     color: #FFFFFF;
+}
+.footer-wrapper ul li a:hover{
+    color: #005246;
 }
 .footer-wrapper i{
     margin-right: 10px;
+}
+.footer-wrapper i:hover{
+    color: #005246;
 }
 /* Top Button Styles */
 #myBtn {
@@ -660,4 +709,68 @@ footer{
   
   #myBtn:hover {
     background-color: #106853;
+  }
+
+  
+  .scroll-arrow {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer;
+      padding:0;
+      margin: 10px;
+      opacity: 0.5;
+      font-size:34px;
+      transition: 0.2s;
+  }
+  .scroll-arrow:hover {
+    transition: 0.2s;
+    opacity:1;
+  }
+   .carousel{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+   }
+   .carousel ul {
+      width: 70%;
+      scroll-behavior: smooth;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      text-align: center;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+    .carousel  ul::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel li {
+      list-style: none;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      width: 20%;
+      margin-left: 3%;
+      margin-right: 3%;
+      transition: 0.2s;
+    }
+  @media (max-width: 1200px){
+    .carousel ul{
+        width: 70%;
+    }
+    .carousel li{
+        width: 45%;
+    }
+  }
+  @media (max-width: 768px){
+    .carousel ul{
+        width: 70%;
+    }
+    .carousel li{
+        width: 100%;
+    }
   }

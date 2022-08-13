@@ -192,3 +192,18 @@
 .partner-page{
     margin: 50px 0;
 }
+  input[type=text]::placeholder {
+    color: #005246;
+    opacity: 1; /* Firefox */
+  }
+  
+  input[type=text]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #005246;
+}
+  
+input[type=text]::-ms-input-placeholder { /* Microsoft Edge */
+    color: #005246;
+}
+.galery{
+    margin-bottom: 50px;
+}

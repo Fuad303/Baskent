@@ -14,9 +14,19 @@ a:hover{
     color: #FFFFFF;
 }
 .nav{
-    background: url(./images/nav-image.png)  no-repeat;
+    background: url(./images/nav-image.png) no-repeat;
     background-size: cover;
     padding-top: 20px;
+    height: 100%;
+    position: relative;
+}
+.nav-bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0.3;
+    margin-top: -20px;
 }
 .nav-top{
     display: flex;
@@ -27,6 +37,7 @@ a:hover{
     display: flex;
     justify-content: center;
     height: 100%;
+    z-index: 1;
 }
 .nav-rezervation a:hover{
     background-color: #005246;
@@ -46,6 +57,7 @@ a:hover{
     background-color: #ffffff5b;
     width: 355px;
     height: 100px;
+    z-index: 1;
 }
 .nav-logo img{
     margin-top: -35px;
@@ -53,6 +65,7 @@ a:hover{
 .nav-social{
     text-align: center;
     color: #FFFFFF;
+    z-index: 1;
     /* margin-left: 150px; */
 }
 .nav-social i{
@@ -85,30 +98,18 @@ a:hover{
     cursor: pointer;
     margin-top: 0;
 }
-.nav-menu{
-    width: 100%;
-    margin-top: 22px;
-}
-.nav-menu ul{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-}
-.nav-menu a{
-    width: 100%;
-    color: #FFFFFF;
-    font-size: 17px;
-    font-weight: bold;
-    text-decoration: none;
+.nav__menu ul li{
+    z-index: 1;
 }
 hr{
     border: 1.4px solid #FFFFFF;
 }
 .header-title{
     padding-bottom: 194px;
+    position: sticky;
 }
 .header-title h1{
-    padding-top: 100px;
+    margin-top: 100px;
     font-size: 42px;
     color: #FFFFFF;
     padding-bottom: 93px;
@@ -128,7 +129,7 @@ hr{
 .hide-search{
     display: none;
 }
-::placeholder {
+  ::placeholder {
     color: #FFFFFF;
     opacity: 1; /* Firefox */
   }
@@ -156,7 +157,7 @@ hr{
 }
 .nav div.nav__menu ul li a:hover{
     background-color: #A56F29;
-}
+}   
 .nav div.media_button {
     width: 40px;
     height: 40px;
@@ -213,14 +214,12 @@ hr{
     }
 }
 @media (max-width: 991px){
-    .nav-menu a{
-        font-size: 13px;
-    }
-}
-@media (max-width: 991px){
     #nav__bg{
         background-color: transparent; 
         padding: 0;
+    }
+    .nav-menu a{
+        font-size: 13px;
     }
     .nav div.nav__menu ul li a:hover{
         background-color: transparent;
@@ -273,7 +272,6 @@ hr{
     }
     
     .nav div.nav__menu ul li a{
-        
         line-height: 20px;
         width: 100%;
         height: 40px;

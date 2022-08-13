@@ -4,6 +4,7 @@
     margin-bottom: 83px;
     text-align: center;
     color: #FFFFFF;
+    position: relative;
 }
 .pages-title a{
     text-decoration: none;

@@ -796,3 +796,11 @@ footer{
         width: 100%;
     }
   }
+  @media (max-width: 413px){
+    .carousel ul{
+        width: 60%;
+    }
+    .carousel li{
+        width: 100%;
+    }
+  }

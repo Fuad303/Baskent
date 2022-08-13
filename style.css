@@ -303,6 +303,17 @@ hr{
       .nav-social::-ms-input-placeholder { /* Microsoft Edge */
        color: #005246;
       }
+      ::placeholder {
+        color: #005246;
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color: #005246;
+      }
+      
+      ::-ms-input-placeholder { /* Microsoft Edge */
+       color: #005246;
+      }
 }
 /* About Styles */
 .about{
@@ -668,17 +679,18 @@ footer{
 .footer-wrapper{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     color: #FFFFFF;
     padding-top: 50px;
-    gap: 106px;
 }
 .footer-wrapper li{
     list-style: none;
     line-height: 2.4em;
+    margin: 0 auto;
 }
 .footer-wrapper ul li a{
     text-decoration: underline;
+    text-underline-offset: 3px;
     color: #FFFFFF;
 }
 .footer-wrapper ul li a:hover{
@@ -689,6 +701,12 @@ footer{
 }
 .footer-wrapper i:hover{
     color: #005246;
+}
+@media (max-width: 991px){
+    .footer-wrapper ul{
+        margin-bottom: 50px;
+        text-align: center;
+    }
 }
 /* Top Button Styles */
 #myBtn {
@@ -757,6 +775,10 @@ footer{
       margin-left: 3%;
       margin-right: 3%;
       transition: 0.2s;
+    }
+    .carousel i{
+        color: #005246;
+
     }
   @media (max-width: 1200px){
     .carousel ul{

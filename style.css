@@ -598,6 +598,9 @@ hr{
     .imglist{
         flex-direction: column;
     }
+    .grid{
+        width: 100%;
+    }
 }
 /* Feedback */
 .feedback{
@@ -726,80 +729,7 @@ footer{
   #myBtn:hover {
     background-color: #106853;
   }
-
-  
-  .scroll-arrow {
-      display: inline-block;
-      position: relative;
-      vertical-align: middle;
-      cursor: pointer;
-      padding:0;
-      margin: 10px;
-      opacity: 0.5;
-      font-size:34px;
-      transition: 0.2s;
-  }
-  .scroll-arrow:hover {
-    transition: 0.2s;
-    opacity:1;
-  }
-   .carousel{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 50px;
-   }
-   .carousel ul {
-      width: 70%;
-      scroll-behavior: smooth;
-      display: inline-block;
-      position: relative;
-      vertical-align: middle;
-      text-align: center;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-    }
-    .carousel  ul::-webkit-scrollbar {
-      display: none;
-    }
-    .carousel li {
-      list-style: none;
-      display: inline-block;
-      position: relative;
-      vertical-align: middle;
-      width: 20%;
-      margin-left: 3%;
-      margin-right: 3%;
-      transition: 0.2s;
-    }
-    .carousel i{
-        color: #005246;
-
-    }
-  @media (max-width: 1200px){
-    .carousel ul{
-        width: 70%;
-    }
-    .carousel li{
-        width: 45%;
-    }
-  }
-  @media (max-width: 768px){
-    .carousel ul{
-        width: 70%;
-    }
-    .carousel li{
-        width: 100%;
-    }
-  }
-  @media (max-width: 413px){
-    .carousel ul{
-        width: 60%;
-    }
-    .carousel li{
-        width: 100%;
-    }
+  .partner{
+    margin-top: 100px;
   }
 

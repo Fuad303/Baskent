@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
     <!-- Fancy Box -->
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="/owl.carousel.min.css">
+    <link rel="stylesheet" href="/owl.theme.default.min.css">
+    <!-- Owl Carousel -->
     <title>Başkent</title>
 </head>
 <body>
@@ -161,23 +165,17 @@
             </div>
         </div>
     </section>
-    <section class="partner carousel">
+    <section class="partner">
         <div class="container">
-        <div class="scroll-arrow" id="scroll-left">
-            <i class="fa-solid fa-circle-left"></i>
-          </div>
-          <ul id="imgList">
-            <li><img src="./images/partner-1.png"/></li>
-            <li><img src="./images/partner-2.png"/></li>
-            <li><img src="./images/partner-3.png"/></li>
-            <li><img src="./images/partner-4.png"/></li>
-            <li><img src="./images/partner-5.png"/></li>
-          </ul>
-          <div class="scroll-arrow" id="scroll-right" onclick="scrollRight()">
-            <i class="fa-solid fa-circle-right"></i>
-          </div>
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="./images/partner-1.png" alt=""></div>
+                <div class="item"><img src="./images/partner-2.png" alt=""></div>
+                <div class="item"><img src="./images/partner-3.png" alt=""></div>
+                <div class="item"><img src="./images/partner-4.png" alt=""></div>
+                <div class="item"><img src="./images/partner-5.png" alt=""></div>
+            </div>
         </div>
-        </section>
+    </section>
     <section class="blog">
         <div class="container">
             <div class="whyus-title">
@@ -217,7 +215,7 @@
     <section class="galery">
         <div class="container">
             <div class="imglist">
-                <div class="grid">
+                <div class="grid col-3">
                     <div class="grid-item">
                         <a href="./images/galery-1.png" data-fancybox="group">
                             <img src="./images/galery-1.png" />
@@ -234,7 +232,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="grid">
+                <div class="grid col-3">
                     <div class="grid-item">
                         <a href="./images/galery-4.png" data-fancybox="group">
                             <img src="./images/galery-4.png" />
@@ -246,7 +244,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="grid">
+                <div class="grid col-6">
                     <div class="grid-item ">
                         <a href="./images/galery-6.png" data-fancybox="group">
                             <img src="./images/galery-6.png" />
@@ -350,5 +348,10 @@
  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
  <script src="/masonry.pkgd.min.js"></script>
  <!-- Masonry -->
+ <!-- Owl Carousel -->
+ <script src="/jquery.min.js"></script>
+ <script src="/owl.carousel.min.js"></script>
+ <script src="/owl-carousel.js"></script>
+ <!-- Owl Carousel -->
 </body>
 </html>

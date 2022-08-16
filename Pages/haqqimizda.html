@@ -14,6 +14,10 @@
     <!-- Font Awasome -->
     <script src="https://kit.fontawesome.com/18fe446eba.js" crossorigin="anonymous"></script>
     <!-- Font Awasome -->
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="/owl.carousel.min.css">
+    <link rel="stylesheet" href="/owl.theme.default.min.css">
+    <!-- Owl Carousel -->    
     <title>Başkent | Haqqımızda</title>
 </head>
 <body>
@@ -127,23 +131,17 @@
             </div>
         </div>
     </section>
-    <section class="partner-page carousel">
+    <section class="partner">
         <div class="container">
-        <div class="scroll-arrow" id="scroll-left">
-            <i class="fa-solid fa-circle-left"></i>
-          </div>
-          <ul id="imgList">
-            <li><img src="/images/partner-1.png"/></li>
-            <li><img src="/images/partner-2.png"/></li>
-            <li><img src="/images/partner-3.png"/></li>
-            <li><img src="/images/partner-4.png"/></li>
-            <li><img src="/images/partner-5.png"/></li>
-          </ul>
-          <div class="scroll-arrow" id="scroll-right" onclick="scrollRight()">
-            <i class="fa-solid fa-circle-right"></i>
-          </div>
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="/images/partner-1.png" alt=""></div>
+                <div class="item"><img src="/images/partner-2.png" alt=""></div>
+                <div class="item"><img src="/images/partner-3.png" alt=""></div>
+                <div class="item"><img src="/images/partner-4.png" alt=""></div>
+                <div class="item"><img src="/images/partner-5.png" alt=""></div>
+            </div>
         </div>
-        </section>
+    </section>
     <footer>
         <div class="container">
             <div class="footer-wrapper">
@@ -192,5 +190,10 @@
  <script src="/script.js"></script>
  <script src="/main.js"></script>
  <!--  Script  -->
+ <!-- Owl Carousel -->
+  <script src="/jquery.min.js"></script>
+  <script src="/owl.carousel.min.js"></script>
+  <script src="/owl-carousel.js"></script>
+ <!-- Owl Carousel -->
 </body>
 </html>

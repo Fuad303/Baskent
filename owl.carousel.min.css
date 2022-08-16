@@ -36,8 +36,6 @@
     -webkit-touch-callout:none
 }.owl-carousel .owl-item img{
     display:block;width:100%
-}.owl-carousel .owl-dots.disabled,.owl-carousel .owl-nav.disabled{
-    display:none
 }.no-js .owl-carousel,.owl-carousel.owl-loaded{
     display:block}
 .owl-carousel .owl-dot,.owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev{

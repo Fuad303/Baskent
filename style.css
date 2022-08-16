@@ -397,6 +397,11 @@ hr{
     left: 0;
     top: 60px;
 }
+@media (max-width: 991px){
+    .whyus .container{
+        max-width: none;
+    }
+}
 @media (max-width: 768px)
 {
     .whyus-design-1,
@@ -467,6 +472,7 @@ hr{
 }
 @media (max-width: 768px){
     .fillial-wrapper{
+        width: 100%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -475,6 +481,13 @@ hr{
     .fillial-item-title{
         font-size: 15px;
         padding-top: 215px;
+    }
+}
+@media (min-width: 576px){
+    .fillial .container,
+    .partner .container
+    {
+        max-width: none;
     }
 }
 /* Menu */
@@ -731,5 +744,6 @@ footer{
   }
   .partner{
     margin-top: 100px;
+    margin: 50px 100px;
   }
 

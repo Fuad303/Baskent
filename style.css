@@ -73,7 +73,7 @@ a:hover{
     margin-bottom: 30px;
 }
 .nav-social i:hover{
-    color: #005246;
+    color: #ca3d26;
 }
 .nav-search{
     position: relative;
@@ -156,7 +156,7 @@ hr{
     border-radius: 4px;
 }
 .nav div.nav__menu ul li a:hover{
-    background-color: #A56F29;
+    background-color: #ca3d26;
 }   
 .nav div.media_button {
     width: 40px;
@@ -200,7 +200,7 @@ hr{
     margin: 0;
 }
 #nav__bg{
-    background-color: #A56F29; 
+    background-color: #ca3d26; 
     padding: 12px 22px;
 }
 @media (max-width: 1200px){
@@ -226,12 +226,14 @@ hr{
     }
     .nav-menu, 
     .nav-rezervation,
-    .nav-search{
+    .nav-search,
+    .nav-social a i{
         display: none;
     }
     .icon,
     .hide-rezervation,
-    .hide-search{
+    .hide-search,
+    .hide-social a i{
         display: block;
     }
     .container{
@@ -242,14 +244,11 @@ hr{
     }
     .nav div.nav__menu{
         position: absolute;
-        background-color: #FFFFFF;
-        margin-top: 75px;
+        background-color: rgb(33, 37, 41);
+        margin-top: 100px;
         height: 0;
         overflow: hidden;
         flex-shrink: 0;
-    }
-    .nav div.nav__menu ul li a:hover{
-        color: #00524686;
     }
     .nav div.show_list{
         height: 400px;
@@ -267,7 +266,7 @@ hr{
     .nav div.nav__menu ul li {
         width: 100%;
         height: 70px;
-        background-color:#FFFFFF;
+        background-color:rgb(33, 37, 41);
         text-align: center;
     }
     
@@ -276,14 +275,17 @@ hr{
         width: 100%;
         height: 40px;
         display: table;
-        color: #005246;
+        color: #FFFFFF;
         font-size: 17px;
         padding: 0;
     }
-    
+    .nav div.nav__menu ul li a:hover{
+        color: #ca3d26;
+    }
     .nav div.media_button{
         display: block;
-        margin-top: 60px;
+        position: absolute;
+        margin-top: -20px;
     }
     .nav-social i{
         margin-right: 2px;
@@ -312,6 +314,27 @@ hr{
       ::-ms-input-placeholder { /* Microsoft Edge */
        color: #005246;
       }
+      .nav-logo{
+        position: absolute;
+        left: 39%; 
+      }
+      .header-title{
+        margin-top: 150px;
+        margin-left: 50px;
+      }
+      .hide-search input{
+        padding: 5px;
+        border-radius: 6px;
+      }
+      hr{
+        margin-top: 100px;
+      }
+
+}
+@media (max-width: 525px){
+    .nav-logo{
+        left: 25%;
+    }
 }
 /* About Styles */
 .about{
@@ -698,24 +721,41 @@ footer{
     color: #FFFFFF;
     padding-top: 50px;
 }
+.footer-menu li a{
+    position: relative;
+}
+.footer-menu li a::after
+{
+    position: absolute;
+    text-decoration: none;
+    content: '';
+    width: 0%;
+    height: 1px;
+    background: #ca3d26;
+    display: block;
+    left: 0;
+    transition: 0.5s;
+}
+.footer-menu li a:hover::after
+{
+    width: 100%;
+}
 .footer-wrapper li{
     list-style: none;
     line-height: 2.4em;
     margin: 0 auto;
 }
 .footer-wrapper ul li a{
-    text-decoration: underline;
-    text-underline-offset: 3px;
     color: #FFFFFF;
 }
 .footer-wrapper ul li a:hover{
-    color: #005246;
+    color: #ca3d26;
 }
 .footer-wrapper i{
     margin-right: 10px;
 }
 .footer-wrapper i:hover{
-    color: #005246;
+    color: #ca3d26;
 }
 @media (max-width: 991px){
     .footer-wrapper ul{
@@ -733,15 +773,15 @@ footer{
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: #005246;
+    background-color: rgb(33, 37, 41);
     color: white;
     cursor: pointer;
     padding: 7px 14px;
-    border-radius: 4px;
+    border-radius: 50%;
   }
   
   #myBtn:hover {
-    background-color: #106853;
+    background-color: #ca3d26;
   }
   .partner{
     margin: 50px 50px 20px 50px;

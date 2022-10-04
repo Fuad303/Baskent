@@ -1,2 +1,2 @@
 # Baskent
-Site's URL:baskent.netlify.app
+Site's URL:https://baskent.netlify.app
